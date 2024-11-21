@@ -1,0 +1,237 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Ensure padding and border don't affect layout */
+}
+
+html, body {
+  height: 100%; /* Ensure the body takes full height */
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Header container */
+header {
+  flex-shrink: 0; /* Prevent header from shrinking */
+  display: flex;
+  flex-direction: column; /* Stack the background image and content vertically */
+  width: 100%;
+}
+
+.header-background {
+  background-image: url('images/background.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100px;
+  width: 100%;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between; /* Space out logo, nav, and book button */
+  align-items: center; /* Align all elements vertically at the center */
+  width: 100%; /* Ensure it takes full width */
+  padding: 20px 40px;
+  background-color: rgba(255, 255, 255, 0.5); /* Transparent background */
+}
+
+.header-content .logo img {
+  height: 150px;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-start; /* Align navigation links to the left */
+  align-items: center; /* Align items vertically at the center */
+  gap: 35px; /* Space between links */
+  margin-left: 20px; /* Optional: gives some space between the logo and nav */
+}
+
+header nav .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 35px; /* Space between the links */
+  margin: 0;
+  padding: 0;
+  align-items: center; /* Ensure nav links align vertically in the center */
+}
+
+header nav .nav-links li {
+  display: inline;
+}
+
+header nav .nav-links a {
+  color: #ffbc04; /* Retro gold color */
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: bold;
+  padding: 0 15px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+
+header nav .nav-links a:hover {
+  color: #fe914d;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Book Button Styling */
+header nav .book-button {
+  margin-left: auto; /* Push the book button to the right */
+  display: flex;
+  justify-content: flex-end; /* Ensure it stays on the right side */
+}
+
+header nav .book-button img {
+  width: 150px; /* Adjust size of the book button */
+  height: auto;
+  cursor: pointer;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+}
+
+.image-placeholder {
+  position: relative; /* Necessary for positioning overlay images */
+  display: inline-block;
+  width: 100%;
+  height: 300px; /* Set a fixed height to ensure the overlay has room to be positioned */
+}
+
+.image-placeholder img {
+  width: 100%; /* Full width for the main image */
+  height: auto;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+/* Position the mobile image at the top-left corner */
+.overlay-image {
+  position: absolute;
+  top: 10%;
+  left: 25%;
+  max-width: 50%; /* Limit the maximum width to 20% of the parent container */
+  height: auto;
+  z-index: 1;
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+/* Contact Form Styling */
+.contact-form-container {
+  margin-top: 40px; /* Space between the business card and form */
+  padding: 20px;
+  text-align: center; /* Center the heading */
+}
+
+.contact-form-container h2 {
+  font-size: 24px;
+  margin-bottom: 20px; /* Space below the heading */
+}
+
+.contact-form {
+  max-width: 600px; /* Limit form width */
+  margin: 0 auto; /* Center the form */
+  text-align: left; /* Align form text to the left */
+}
+
+.form-group {
+  margin-bottom: 15px; /* Space between input fields */
+}
+
+.form-group label {
+  display: block; /* Ensure labels are above input fields */
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%; /* Full width input fields */
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.form-group textarea {
+  resize: vertical; /* Allow vertical resizing only */
+}
+
+.submit-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 18px;
+  color: #ffffff;
+  background-color: #fe914d; /* Retro gold color */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #f1660f; /* Slightly darker shade on hover */
+}
+
+footer {
+  flex-shrink: 0; /* Prevent footer from shrinking */
+  text-align: center;
+  background-image: url('images/background.jpg');
+  padding: 20px;
+  background-color: #fffefe;
+  color: #ffffff;
+  margin-top: 20px;
+  width: 100%;
+  position: relative;
+  z-index: 10; /* Ensure the footer is above other elements */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .nav-container {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    position: absolute;
+    top: 100px;
+    left: 0;
+  }
+
+  .nav-container.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-links a {
+    padding: 10px 20px;
+  }
+}

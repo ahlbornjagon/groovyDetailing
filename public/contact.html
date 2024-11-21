@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Groovy Detailing</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Ensure this points to the same stylesheet as index.html -->
+    <!-- Include EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <!-- Background Image Section -->
+      <div class="header-background"></div>
+
+      <!-- Logo and Navigation -->
+      <div class="header-content">
+        <div class="logo">
+          <img src="images/mainLogo.PNG" alt="Groovy Detailing Logo">
+        </div>
+        <div id="hamburger" class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <nav id="nav-menu">
+          <div class="nav-container" id="nav-container">
+            <ul class="nav-links">
+              <!-- Regular Navigation Links -->
+              <li><a href="index.html">Home</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="contact.html" class="active-link">Contact</a></li>
+              <li class="book-button">
+                <a href="calendar.html">
+                  <img src="images/book.png" alt="Book Services" />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- Business Card Section -->
+      <section class="contact-section">
+        <div class="business-card-container">
+          <img src="images/businessCard.PNG" alt="Business Card" class="business-card-img" />
+        </div>
+      </section>
+
+      <!-- Contact Us Form -->
+      <section class="contact-form-section">
+        <div class="contact-form-container">
+          <h2>Contact Us</h2>
+          <form class="contact-form">
+            <div class="form-group">
+              <label for="name">Full Name:</label>
+              <input type="text" id="name" name="name" placeholder="Enter your name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address:</label>
+              <input type="email" id="email" name="email" placeholder="Enter your email" required />
+            </div>
+            <div class="form-group">
+              <label for="message">Message:</label>
+              <textarea id="message" name="message" placeholder="Write your message here" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="submit-button">Send Message</button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>© 2024 Groovy Detailing. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script> <!-- Link to external JS file -->
+  </body>
+</html>

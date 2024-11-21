@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <style>
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+        .gallery-item {
+            width: 100%;
+            height: auto;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-background"></div>
+        <div class="header-content">
+            <div class="logo">
+                <img src="images/mainLogo.PNG" alt="Groovy Detailing Logo">
+            </div>
+            <div id="hamburger" class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav id="nav-menu">
+                <div class="nav-container" id="nav-container">
+                    <ul class="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="gallery.html" class="active-link">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li class="book-button">
+                            <a href="calendar.html">
+                                <img src="images/book.png" alt="Book Services" />
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h1>Photo Gallery</h1>
+        <div class="gallery">
+            <div class="gallery-item">
+                <a href="/images/gallery/1.jpg" data-lightbox="gallery" data-title="Photo 1">
+                    <img src="/images/gallery/1.jpg" alt="Photo 1">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="/images/gallery/2.jpg" data-lightbox="gallery" data-title="Photo 2">
+                    <img src="/images/gallery/2.jpg" alt="Photo 2">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="/images/gallery/3.jpg" data-lightbox="gallery" data-title="Photo 3">
+                    <img src="/images/gallery/3.jpg" alt="Photo 3">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="/images/gallery/4.jpg" data-lightbox="gallery" data-title="Photo 4">
+                    <img src="/images/gallery/4.jpg" alt="Photo 4">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="/images/gallery/5.jpg" data-lightbox="gallery" data-title="Photo 5">
+                    <img src="/images/gallery/5.jpg" alt="Photo 5">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="/images/gallery/6.jpg" data-lightbox="gallery" data-title="Photo 6">
+                    <img src="/images/gallery/6.jpg" alt="Photo 6">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="/images/gallery/7.jpg" data-lightbox="gallery" data-title="Photo 7">
+                    <img src="/images/gallery/7.jpg" alt="Photo 7">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="/images/gallery/8.jpg" data-lightbox="gallery" data-title="Photo 8">
+                    <img src="/images/gallery/8.jpg" alt="Photo 8">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="/images/gallery/9.jpg" data-lightbox="gallery" data-title="Photo 9">
+                    <img src="/images/gallery/9.jpg" alt="Photo 9">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="/images/gallery/10.jpg" data-lightbox="gallery" data-title="Photo 10">
+                    <img src="/images/gallery/10.jpg" alt="Photo 10">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="/images/gallery/11.jpg" data-lightbox="gallery" data-title="Photo 11">
+                    <img src="/images/gallery/11.jpg" alt="Photo 11">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="/images/gallery/12.jpg" data-lightbox="gallery" data-title="Photo 12">
+                    <img src="/images/gallery/12.jpg" alt="Photo 12">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="/images/gallery/13.jpg" data-lightbox="gallery" data-title="Photo 13">
+                    <img src="/images/gallery/13.jpg" alt="Photo 13">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="/images/gallery/14.jpg" data-lightbox="gallery" data-title="Photo 14">
+                    <img src="/images/gallery/14.jpg" alt="Photo 14">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="/images/gallery/15.jpg" data-lightbox="gallery" data-title="Photo 15">
+                    <img src="/images/gallery/15.jpg" alt="Photo 15">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="/images/gallery/16.jpg" data-lightbox="gallery" data-title="Photo 16">
+                    <img src="/images/gallery/16.jpg" alt="Photo 16">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="/images/gallery/17.jpg" data-lightbox="gallery" data-title="Photo 17">
+                    <img src="/images/gallery/17.jpg" alt="Photo 17">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="/images/gallery/18.jpg" data-lightbox="gallery" data-title="Photo 18">
+                    <img src="/images/gallery/18.jpg" alt="Photo 18">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="/images/gallery/19.jpg" data-lightbox="gallery" data-title="Photo 19">
+                    <img src="/images/gallery/19.jpg" alt="Photo 19">
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2024 Groovy Detailing. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        lightbox.init();
+      });
+    </script>
+</body>
+</html>
