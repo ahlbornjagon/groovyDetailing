@@ -88,10 +88,19 @@ header nav .book-button {
   justify-content: flex-end; /* Ensure it stays on the right side */
 }
 
-header nav .book-button img {
-  width: 150px; /* Adjust size of the book button */
-  height: auto;
-  cursor: pointer;
+header nav .book-button a {
+  color: #ffbc04; /* Retro gold color */
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: bold;
+  padding: 0 15px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+
+header nav .book-button a:hover {
+  color: #fe914d;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 /* Hamburger Menu */
@@ -108,34 +117,33 @@ header nav .book-button img {
   background-color: #333;
 }
 
-.image-placeholder {
+.mainImage {
   position: relative; /* Necessary for positioning overlay images */
   display: inline-block;
   width: 100%;
-  height: 300px; /* Set a fixed height to ensure the overlay has room to be positioned */
+  height: 100%; 
 }
 
-.image-placeholder img {
+.mainImage img {
   width: 100%; /* Full width for the main image */
-  height: auto;
+  height:fit;
   object-fit: cover;
   pointer-events: none;
 }
 
-/* Position the mobile image at the top-left corner */
-.overlay-image {
-  position: absolute;
-  top: 10%;
-  left: 25%;
-  max-width: 50%; /* Limit the maximum width to 20% of the parent container */
-  height: auto;
-  z-index: 1;
-  border: none;
-  outline: none;
-  box-shadow: none;
+.business-card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto; /* Adjust as needed */
+  margin-bottom: 20px; /* Add some space below the business card */
 }
 
-/* Contact Form Styling */
+.business-card-container img {
+  max-width: 75%;
+  height: auto;
+}
+
 .contact-form-container {
   margin-top: 40px; /* Space between the business card and form */
   padding: 20px;
@@ -189,10 +197,6 @@ header nav .book-button img {
   transition: background-color 0.3s ease;
 }
 
-.submit-button:hover {
-  background-color: #f1660f; /* Slightly darker shade on hover */
-}
-
 footer {
   flex-shrink: 0; /* Prevent footer from shrinking */
   text-align: center;
@@ -214,8 +218,12 @@ footer {
     width: 100%;
     background-color: rgba(255, 255, 255, 0.9);
     position: absolute;
-    top: 100px;
+    top: 10px;
     left: 0;
+  }
+
+  .business-card-container img {
+    max-width: 100%; /* Adjust the size of the business card image for smaller screens */
   }
 
   .nav-container.active {
@@ -235,3 +243,4 @@ footer {
     padding: 10px 20px;
   }
 }
+
